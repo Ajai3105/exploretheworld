@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Your Trip | Roamly</title>
+    <link rel="stylesheet" href="assests/css/trip.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="./frontpage.html" class="logo">Explore with AV<span>.</span></a>
+
+        <nav class="nav-links">
+            <a href="./frontpage.html">Home</a>
+            <a href="destinationpage.html">Destinations</a>
+            <a href="tripspage.html">Trip Ideas</a>
+            <a href="aboutpage.html">About</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">✦ YOUR NEXT ADVENTURE STARTS HERE</span>
+            <h1>Let's Plan Your Journey!</h1>
+            <p>Tell us a little about your dream trip. Your next
+               unforgettable experience starts with a few details.</p>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <main class="booking-section">
+
+        <div class="steps">
+            <span class="step">01 · Choose Trip</span>
+            <span class="step active">02 · Your Details</span>
+            <span class="step">03 · Confirmation</span>
+        </div>
+
+        <form class="booking-card"
+              action="#confirmation"
+              method="get"
+              onsubmit="document.getElementById('booking-form').style.display='none'; document.getElementById('confirmation').style.display='block'; window.scrollTo(0,0); return false;"
+              id="booking-form">
+
+            <div class="form-heading">
+                <h2>Book Your Adventure</h2>
+                <p>Complete the form below to plan your perfect getaway.</p>
+            </div>
+
+            <!-- TRIP DETAILS -->
+            <section class="form-section">
+                <h3 class="section-title">
+                    <span class="section-icon">✈</span>
+                    Trip Details
+                </h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label for="trip">
+                            Choose Your Trip <span class="required">*</span>
+                        </label>
+
+                        <select id="trip" name="trip" required>
+                            <option value="">-- Select your destination --</option>
+                            <option value="Mountain Escape">Mountain Escape</option>
+                            <option value="Island Getaway">Island Getaway</option>
+                            <option value="Coastal Holiday">Coastal Holiday</option>
+                            <option value="Nature Retreat">Nature Retreat</option>
+                            <option value="Culture and City Break">Culture &amp; City Break</option>
+                            <option value="Outdoor Discovery">Outdoor Discovery</option>
+                            <option value="Swiss Alps">Swiss Alps</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Ooty">Ooty</option>
+                            <option value="Manali">Manali</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="departure">
+                            Departure Date <span class="required">*</span>
+                        </label>
+                        <input type="date" id="departure"
+                               name="departure" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="return">
+                            Return Date <span class="required">*</span>
+                        </label>
+                        <input type="date" id="return"
+                               name="return" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adults">
+                            Adults <span class="required">*</span>
+                        </label>
+                        <select id="adults" name="adults" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2" selected>2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                            <option value="5">5 Adults</option>
+                            <option value="6">6 Adults</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="children">Children</label>
+                        <select id="children" name="children">
+                            <option value="0" selected>0 Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                            <option value="4">4 Children</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="budget">Estimated Budget Per Person</label>
+                        <select id="budget" name="budget">
+                            <option value="">-- Select your budget --</option>
+                            <option value="Under ₹10000">Under ₹10,000</option>
+                            <option value="₹10000-₹25000">₹10,000 - ₹25,000</option>
+                            <option value="₹25000-₹50000">₹25,000 - ₹50,000</option>
+                            <option value="Above ₹50000">Above ₹50,000</option>
+                        </select>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- PERSONAL DETAILS -->
+            <section class="form-section">
+                <h3 class="section-title">
+                    <span class="section-icon">♙</span>
+                    Personal Information
+                </h3>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="fullname">
+                            Full Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="fullname" name="fullname"
+                               placeholder="Enter your full name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">
+                            Email Address <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email"
+                               placeholder="example@email.com"
+                               autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">
+                            Phone Number <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="phone" name="phone"
+                               placeholder="Enter phone number"
+                               autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Your City</label>
+                        <input type="text" id="city" name="city"
+                               placeholder="Enter your city"
+                               autocomplete="address-level2">
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="requests">Special Requests</label>
+                        <textarea id="requests" name="requests"
+                                  placeholder="Accommodation preferences, activities, dietary needs, or other requests..."></textarea>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- INFORMATION -->
+            <div class="info-box">
+                <h3>🌿 What happens next?</h3>
+                <p>
+                    Review your trip details before making any real travel
+                    arrangements. This demonstration does not calculate
+                    prices, reserve hotels, or process payments.
+                </p>
+            </div>
+
+            <label class="terms">
+                <input type="checkbox" required>
+                <span>
+                    I confirm that the information I entered is correct.
+                    <span class="required">*</span>
+                </span>
+            </label>
+
+            <!-- ACTIONS -->
+            <div class="button-row">
+                <a href="tripspage.html" class="btn btn-secondary">
+                    ← Back to Trips
+                </a>
+
+                <button type="submit" class="btn btn-primary">
+                    Submit Booking Request →
+                </button>
+            </div>
+
+            <p class="privacy-note">
+                Demo project only. Your details are not saved or transmitted.
+            </p>
+
+        </form>
+
+        <!-- DEMO CONFIRMATION -->
+        <section class="confirmation" id="confirmation">
+            <div class="success-icon">✓</div>
+
+            <h2>Thank You for Choosing Roamly!</h2>
+
+            <p>
+                Your demo booking form has been completed successfully.
+                Your next adventure is waiting!
+            </p>
+
+            <p>
+                No actual reservation has been created.
+            </p>
+
+            <a href="./frontpage.html" class="btn btn-primary">
+                Back to Home →
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="./frontpage.html" class="logo">Explore with AV<span>.</span></a>
+        <p>Discover the world, one journey at a time.</p>
+        <p style="margin-top: 8px;">© 2026 AV. Explore more. Worry less.</p>
+    </footer>
+
+</body>
+</html>
